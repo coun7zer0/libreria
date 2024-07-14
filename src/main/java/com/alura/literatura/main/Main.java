@@ -65,6 +65,10 @@ public class Main {
           SearchBookWeb();
           break;
 
+      case 2:
+        getAllBooks();
+        break;
+
         case 0:
           System.out.println("\nCerrando la aplicación...\n");
           break;
@@ -128,5 +132,9 @@ public class Main {
     book.setLanguages(languages);
     bookRepository.save(book);
     System.out.println(book);
+  }
+
+  public void getAllBooks() {
+    bookRepository.findAll().forEach(System.out::println);
   }
 }
