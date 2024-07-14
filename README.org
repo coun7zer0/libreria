@@ -1,5 +1,5 @@
 * LiterAlura
-----
+-----
 Este proyecto es parte de un desafió propuesto por alura, mismo que es
 parte del programa Oracle ONE Next Education.
 
@@ -18,9 +18,14 @@ proporcionando al menos 5 opciones de interacción.
   - [[https://mariadb.com/kb/es/acerca-de-mariadb-connectorj/][MariaDB Connector/J]]
 
 ** Funcionalidades
-*** Consultar libros
+*** Consultar libros por título
 El software es capas de buscar libros por nombre en la base de datos
 interna si es que no se llega a encontrar un libro en esta, el
 software se encarga de buscarlo en [[https://gutendex.com/][API de Gutendex]] luego de esto
-procede a guardarlo dentro de la base de datos para futuras consultas
+procede a guardarlo dentro de la base de datos para futuras consultas.
 [[file:img/searchBook.png]]
+
+*** Listar libros registrados
+El software es capaz de listar todos los libros registrados en la base
+de datos.
+[[file:img/ListBooks.png]]
