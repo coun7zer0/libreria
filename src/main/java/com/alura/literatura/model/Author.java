@@ -125,7 +125,7 @@ public class Author {
       + this.name
       + "\nAño de nacimiento: "
       + this.birthYear
-      + "\nAño de fallecimiento"
+      + "\nAño de fallecimiento: "
       + this.deathYear
       + "\nLibros: "
       + "[" + stringBooks.toString().substring(0, stringBooks.toString().length() - 2) + "]";

@@ -66,19 +66,23 @@ public class Main {
           break;
 
       case 2:
-        getAllBooks();
+        findAllBooks();
         break;
 
       case 3:
-        getAllAuthors();
+        findAllAuthors();
         break;
 
-        case 0:
-          System.out.println("\nCerrando la aplicación...\n");
-          break;
+      case 4:
+        findAuthorsByYearAlive();
+        break;
 
-        default:
-          System.out.println("\nOpción inválida\n");
+      case 0:
+        System.out.println("\nCerrando la aplicación...\n");
+        break;
+
+      default:
+        System.out.println("\nOpción inválida\n");
       }
     }
   }
@@ -138,11 +142,27 @@ public class Main {
     System.out.println(book);
   }
 
-  public void getAllBooks() {
+  public void findAllBooks() {
     bookRepository.findAll().forEach(System.out::println);
   }
 
-  public void getAllAuthors() {
+  public void findAllAuthors() {
     authorRepository.findAll().forEach(System.out::println);
+  }
+
+  public void findAuthorsByYearAlive() {
+    Integer year = null;
+    while (year == null) {
+      System.out.println("\nIngrese el año en el que quiere buscar autores vivos: ");
+      try {
+        year = scanner.nextInt();
+      } catch (Exception e) {
+        System.out.println("\nAño invalido...");
+        year = null;
+      }
+      scanner.nextLine();
+    }
+    System.out.println(year);
+    authorRepository.findByYearAlive(year).forEach(System.out::println);
   }
 }
