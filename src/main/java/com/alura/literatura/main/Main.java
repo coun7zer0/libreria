@@ -77,6 +77,10 @@ public class Main {
         findAuthorsByYearAlive();
         break;
 
+      case 5:
+        findBooksByLanguage();
+        break;
+
       case 0:
         System.out.println("\nCerrando la aplicación...\n");
         break;
@@ -153,7 +157,7 @@ public class Main {
   public void findAuthorsByYearAlive() {
     Integer year = null;
     while (year == null) {
-      System.out.println("\nIngrese el año en el que quiere buscar autores vivos: ");
+      System.out.print("\nIngrese el año en el que quiere buscar autores vivos: ");
       try {
         year = scanner.nextInt();
       } catch (Exception e) {
@@ -164,5 +168,23 @@ public class Main {
     }
     System.out.println(year);
     authorRepository.findByYearAlive(year).forEach(System.out::println);
+  }
+
+  public void findBooksByLanguage() {
+    String languageName = null;
+    Language language = null;
+
+    while(language == null) {
+      System.out.println("\nIDIOMAS: ");
+      languageRepository.findAll().forEach(lang -> System.out.println(lang.getName()));
+      System.out.print("\nIngrese el idioma del que quiere buscar los libros :");
+      languageName = scanner.nextLine();
+      language = languageRepository.findByName(languageName).orElse(null);
+      if (language == null) {
+        System.out.println("\n¡¡¡Este idioma no se encuentra en la base de datos!!!");
+      }
+    }
+
+    language.getBooks().forEach(System.out::println);
   }
 }
