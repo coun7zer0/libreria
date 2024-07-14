@@ -138,9 +138,9 @@ public class Book {
         + "\nTitulo: "
         + this.title
         + "\nAuthores: "
-        + stringAuthors.toString().substring(0, stringAuthors.toString().length() - 2)
+        + "[" + stringAuthors.toString().substring(0, stringAuthors.toString().length() - 2) + "]"
         + "\nIdiomas: "
-        + stringLanguages.toString().substring(0, stringLanguages.toString().length() - 2)
+        + "[" + stringLanguages.toString().substring(0, stringLanguages.toString().length() - 2) + "]"
         + "\nNumero de descargas: "
         + this.downloadCount
         + "\n******++-++******";

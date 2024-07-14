@@ -69,6 +69,10 @@ public class Main {
         getAllBooks();
         break;
 
+      case 3:
+        getAllAuthors();
+        break;
+
         case 0:
           System.out.println("\nCerrando la aplicación...\n");
           break;
@@ -136,5 +140,9 @@ public class Main {
 
   public void getAllBooks() {
     bookRepository.findAll().forEach(System.out::println);
+  }
+
+  public void getAllAuthors() {
+    authorRepository.findAll().forEach(System.out::println);
   }
 }

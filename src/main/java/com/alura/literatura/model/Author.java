@@ -119,7 +119,15 @@ public class Author {
 
   @Override
   public String toString() {
-    return "Author [id=" + id + ", name=" + name + ", birthYear=" + birthYear + ", deathYear=" + deathYear + ", books="
-        + books + "]";
+    StringBuilder stringBooks = new StringBuilder();
+    this.books.forEach(book -> stringBooks.append(book.getTitle() + ", "));
+    return "\nAutor: "
+      + this.name
+      + "\nAño de nacimiento: "
+      + this.birthYear
+      + "\nAño de fallecimiento"
+      + this.deathYear
+      + "\nLibros: "
+      + "[" + stringBooks.toString().substring(0, stringBooks.toString().length() - 2) + "]";
   }
 }
