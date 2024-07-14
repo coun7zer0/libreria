@@ -182,7 +182,7 @@ public class Main {
     while(language == null) {
       System.out.println("\nIDIOMAS: ");
       languageRepository.findAll().forEach(lang -> System.out.println(lang.getName()));
-      System.out.print("\nIngrese el idioma del que quiere buscar los libros :");
+      System.out.print("\nIngrese el idioma del que quiere buscar los libros: ");
       languageName = scanner.nextLine();
       language = languageRepository.findByName(languageName).orElse(null);
       if (language == null) {

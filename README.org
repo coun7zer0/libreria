@@ -29,3 +29,21 @@ procede a guardarlo dentro de la base de datos para futuras consultas.
 El software es capaz de listar todos los libros registrados en la base
 de datos.
 [[file:img/ListBooks.png]]
+
+*** Listar autores registrados
+El software es capaz de listar todos los autores registrados en la
+base de datos, así como listar los libros escritos por dichos autores.
+[[file:img/ListAuthors.png]]
+
+*** Listar autores vivos en determinado año
+El software es puede buscar los autores en la base de datos  que
+estuvieron vivos en un determinado año y luego mostrárselos al
+usuario.
+[[file:img/SearchAuthorByYear.png]]
+
+*** Listar libros por idioma
+El software es capaz de listar libros por idioma, esto lo hace
+buscando primero en la base de datos cuales idiomas hay disponibles,
+se los muestra al usuario y al este ultimo elegir uno, el sistema le
+imprime todos los libros registrados en dicho idioma.
+[[file:img/ListBooksByLang.png]]
