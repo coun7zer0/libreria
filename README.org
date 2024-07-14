@@ -23,4 +23,4 @@ El software es capas de buscar libros por nombre en la base de datos
 interna si es que no se llega a encontrar un libro en esta, el
 software se encarga de buscarlo en [[https://gutendex.com/][API de Gutendex]] luego de esto
 procede a guardarlo dentro de la base de datos para futuras consultas
-[[file:img/searchBook.png][Buscar libro por nombre]]
+[[file:img/searchBook.png]]
