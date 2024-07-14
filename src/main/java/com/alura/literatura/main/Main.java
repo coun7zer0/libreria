@@ -166,8 +166,13 @@ public class Main {
       }
       scanner.nextLine();
     }
-    System.out.println(year);
-    authorRepository.findByYearAlive(year).forEach(System.out::println);
+
+    List<Author> authors = authorRepository.findByYearAlive(year);
+
+    if (authors.size() == 0) {
+      System.out.println("\n¡¡¡No se encontraron autores vivos en ese año!!!");
+    }
+    authors.forEach(System.out::println);
   }
 
   public void findBooksByLanguage() {

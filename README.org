@@ -1,0 +1,26 @@
+* LiterAlura
+----
+Este proyecto es parte de un desafió propuesto por alura, mismo que es
+parte del programa Oracle ONE Next Education.
+
+** Descripción
+El objetivo de este desafió es desarrollar un catálogo de libros que
+ofrezca interacción textual mediante la consola a los usuarios,
+proporcionando al menos 5 opciones de interacción.
+
+** Tecnologías Utilizadas
+- [[https://openjdk.org/projects/jdk/17/][JDK 17]]
+- [[https://github.com/FasterXML/jackson][Jackson]]
+- [[https://spring.io/projects/spring-boot][Spring Boot]]
+  - [[https://spring.io/projects/spring-data-jpa][Spring Data JPA]]
+  - [[https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html][Sprig Boot Devtools]]
+- [[https://mariadb.org][MariaDB]]
+  - [[https://mariadb.com/kb/es/acerca-de-mariadb-connectorj/][MariaDB Connector/J]]
+
+** Funcionalidades
+*** Consultar libros
+El software es capas de buscar libros por nombre en la base de datos
+interna si es que no se llega a encontrar un libro en esta, el
+software se encarga de buscarlo en [[https://gutendex.com/][API de Gutendex]] luego de esto
+procede a guardarlo dentro de la base de datos para futuras consultas
+[[file:img/searchBook.png][Buscar libro por nombre]]
